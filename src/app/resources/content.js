@@ -1,20 +1,21 @@
 import { Logo } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Kenneth",
+  lastName: "Tan",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "ktan.kenneth@gmail.com",
+  location: "US/Arizona", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
+  // languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -30,18 +31,18 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/k-nn-tht",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/kenneth-i-tan/",
   },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
-  },
+  // {
+  //   name: "X",
+  //   icon: "x",
+  //   link: "",
+  // },
   {
     name: "Email",
     icon: "email",
@@ -63,8 +64,8 @@ const home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Kenneth, an undergraduate student as the University of California, Santa Barbara studying Computer Science, where I am forging my career to become a software engineer, making meaningful contributions to companies and the community.
+      <br /> 
     </>
   ),
 };
@@ -73,7 +74,7 @@ const about = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from California`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -90,9 +91,10 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Kenneth is a US-based software engineer with a passion for learning and applying new technologies
+        for innovative solutions. He is currently studying at the University of California, Santa Barbara, 
+        where he is honing his skills to be able to contribute to meaningful projects to help the community and companies.
+        He enjoys pysical activities such as bouldering, volleyball, and bowling, and is always looking for new challenges to tackle.
       </>
     ),
   },
@@ -101,63 +103,90 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Ambarella",
+        timeframe: "June 2025 - September 2025",
+        role: "Software Engineer Intern",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Validating and optimizing the porting of neural network models onto Ambarella’s custom SoCs
           </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          // <>
+          //   Spearheaded the integration of AI tools into design workflows, enabling designers to
+          //   iterate 50% faster.
+          // </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/amba_chip.jpeg",
+            alt: "Ambarella Chip Pic",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "ACM with The Paskin Group",
+        timeframe: "April 2025 - June 2025",
+        role: "Machine Learning and Full Stack Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Led the machine learning modeling team in exploring various methods of predictive forecasting 
+            for real estate ranging from linear regression
+            to model chaining
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Built end-to-end application workflows, covering secure user authentication through Google OAuth/Supabase
+            and database functionality
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/paskin_logo.jpeg",
+            alt: "The Paskin Group Logo",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Ambarella",
+        timeframe: "June 2024 - August 2024",
+        role: "Software Engineer Intern",
+        achievements: [
+          <>
+            Designed and developed a web application to visually represent data from 10,000+ documents using interactive
+            charts and time series graphs
+          </>,
+          <>
+            Designed and developed an applications utilizing the MERN stack(MongoDB, Express, React, Node.js), Restful API, and Grafana
+          </>,
+        ],
+        images: [{
+          src: "/images/projects/project-01/amba_logo.png",
+          alt: "Ambarella Logo",
+          width: 16,
+          height: 9,
+        },],
       },
     ],
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "College",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of California, Santa Barbara",
+        description: <>BS in Computer Science and Minor in Statistical Science</>,
       },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+      // {
+      //   name: "Build the Future",
+      //   description: <>Studied online marketing and personal branding.</>,
+      // },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
@@ -265,4 +294,5 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+// export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work};
