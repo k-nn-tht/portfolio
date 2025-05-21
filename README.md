@@ -1,6 +1,6 @@
 # **Kenneth Tan's Portfolio**
 
-Big thanks to Lorant Toth and Zsofia Komaromi for the [portfolio template](https://demo.magic-portfolio.com)
+Big thanks to Lorant Toth and Zsofia Komaromi for the [portfolio template](https://github.com/once-ui-system/magic-portfolio)
 
 I made changes with the overall design and added features like an interactive search bar.
 
