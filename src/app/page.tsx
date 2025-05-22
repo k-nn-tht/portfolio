@@ -6,7 +6,7 @@ import { Projects } from "@/components/work/Projects";
 import { baseURL, routes } from "@/app/resources";
 import { home, about, person, newsletter } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
-import { Posts } from "@/components/blog/Posts";
+import { Project } from "@/components/project/Project";
 import { Meta, Schema } from "@/once-ui/modules";
 
 export async function generateMetadata() {
@@ -80,18 +80,19 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
-      {routes["/blog"] && (
+      {routes["/project"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l" paddingTop="24">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
-              Latest from the blog
+              Latest Projects
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">
-            <Posts range={[1, 2]} columns="2" />
+            <Project range={[1, 2]} columns="2" />
           </Flex>
         </Flex>
       )}
+      {/* <Project range={[1, 2]} columns="2" /> */}
       <Projects range={[2, 3]} />
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
