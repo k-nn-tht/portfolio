@@ -16,44 +16,60 @@ export async function generateMetadata() {
 
 export default function AllProject() {
   return (
-    <Row gap="l" style={{ 
-      display: "flex",
-      width: "100%",
-      justifyContent:"space-between",
-      alignItems:"start"
-      }}>
-      <Column maxWidth="m" style={{ flex: 1 }}>
-        <Schema
-          as="webPage"
-          baseURL={baseURL}
-          path={project.path}
-          title={project.title}
-          description={project.description}
-          image={`${baseURL}/og?title=${encodeURIComponent(project.title)}`}
-          author={{
-            name: person.name,
-            url: `${baseURL}${about.path}`,
-            image: `${baseURL}${person.avatar}`,
-          }}
-        />
-        <Project filterType="odd"/>
-      </Column>
-      <Column maxWidth="m" style={{ flex: 1 }}>
-        <Schema
-          as="webPage"
-          baseURL={baseURL}
-          path={project.path}
-          title={project.title}
-          description={project.description}
-          image={`${baseURL}/og?title=${encodeURIComponent(project.title)}`}
-          author={{
-            name: person.name,
-            url: `${baseURL}${about.path}`,
-            image: `${baseURL}${person.avatar}`,
-          }}
-        />
-        <Project filterType="even"/>
-      </Column>
-    </Row>
+    <Column maxWidth="m">
+      <Schema
+        as="webPage"
+        baseURL={baseURL}
+        path={project.path}
+        title={project.title}
+        description={project.description}
+        image={`${baseURL}/og?title=${encodeURIComponent(project.title)}`}
+        author={{
+          name: person.name,
+          url: `${baseURL}${about.path}`,
+          image: `${baseURL}${person.avatar}`,
+        }}
+      />
+      <Project columns="2" />
+    </Column>
+    // <Row gap="l" style={{ 
+    //   display: "flex",
+    //   width: "100%",
+    //   justifyContent:"space-between",
+    //   alignItems:"start"
+    //   }}>
+    //   <Column maxWidth="m" style={{ flex: 1 }}>
+    //     <Schema
+    //       as="webPage"
+    //       baseURL={baseURL}
+    //       path={project.path}
+    //       title={project.title}
+    //       description={project.description}
+    //       image={`${baseURL}/og?title=${encodeURIComponent(project.title)}`}
+    //       author={{
+    //         name: person.name,
+    //         url: `${baseURL}${about.path}`,
+    //         image: `${baseURL}${person.avatar}`,
+    //       }}
+    //     />
+    //     <Project filterType="odd"/>
+    //   </Column>
+    //   <Column maxWidth="m" style={{ flex: 1 }}>
+    //     <Schema
+    //       as="webPage"
+    //       baseURL={baseURL}
+    //       path={project.path}
+    //       title={project.title}
+    //       description={project.description}
+    //       image={`${baseURL}/og?title=${encodeURIComponent(project.title)}`}
+    //       author={{
+    //         name: person.name,
+    //         url: `${baseURL}${about.path}`,
+    //         image: `${baseURL}${person.avatar}`,
+    //       }}
+    //     />
+    //     <Project filterType="even"/>
+    //   </Column>
+    // </Row>
   );
 }
