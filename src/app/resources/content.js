@@ -61,7 +61,7 @@ const home = {
     display: true,
     title: <>Recent project: <strong className="ml-4">SOLPower</strong></>,
     //SOLPower Link
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/project/solpower",
   },
   subline: (
     <>
