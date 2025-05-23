@@ -59,7 +59,7 @@ const home = {
   headline: <>Developing Innovative Solutions</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">SOLPower</strong></>,
+    title: <>Favorite project: <strong className="ml-4">SOLPower</strong></>,
     //SOLPower Link
     href: "/project/solpower",
   },
