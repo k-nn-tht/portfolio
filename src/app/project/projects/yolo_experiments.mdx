@@ -1,36 +1,37 @@
 ---
-title: "Training Different Models Based on Yolov1"
-publishedAt: "2025-04"
-summary: "A tool to help policymakers identify the best locations for solar energy infrastructure, ultimately contributing to a greener and more sustainable future"
+title: "YOLOv1 Variations"
+publishedAt: "2025-04-15"
+summary: "Experiemented different methods on how to increase accuracy using YOLOv1 as base"
 images:
-  - "/images/projects/project-02/in_progress.png"
+  - "/images/projects/project-02/yolov1/yolo_graphs.png"
+  - "/images/projects/project-02/yolov1/yolov1_architecture.png"
 link: "https://github.com/k-nn-tht/cs190i-yolo"
 ---
 
 ## Overview
 
-A tool to help policymakers identify the best locations for solar energy infrastructure, ultimately contributing to a greener and more sustainable future.
+I explored different methods such as changing the split size, number of bounding boxes, optimizer, or all at once.
 
 ## Key Features
+- Implemented experiments with varying dataset split sizes to analyze generalization performance.
 
-- **Interacive Map**: Visualize solar feasibility, enabling users to explore energy potential across the U.S. in an proactive and digestable way.
-- **Predictive Modeling**: Machine learning model that forecasts solar energy output based on features such as temperature, rain averages, solar refraction, etc.
-- **Chatbot**: Uses predicition to prompt users to ask more about a specific county, leading to a more immersive and knowledgeable experience.
-- **Real Data**: Utilized NREL and NASA databases for reliable data to train our model on, giving the project a real-world basis.
+- Tuned the number of bounding boxes to balance detection accuracy and computational cost.
+
+- Tested multiple optimizers (e.g., Adam, SGD) to compare convergence behavior.
+
+- Conducted combined experiments by altering multiple hyperparameters simultaneously.
+
+- Evaluated model accuracy and efficiency using standardized metrics.
 
 ## Technologies Used
 
-- **XGBoost**: Used for building the core predictive model that estimates solar energy potential based on environmental and location-based features.
-- **React.js and Flask**: For building the front-end and back-end functionality and utilizing dynamic predicitive modeling.
-- **Groq**: Powered the chatbot’s natural language capabilities to allow smooth, fact-aware conversations with users about solar feasibility.
-- **NREL and NASA API**: Provided real-time and historical data on solar radiation, cloud cover, temperature, and other environmental factors critical to the accuracy of the model.
-- **GitHub**: Used for version control and team collaboration, allowing organized development.
+- **PyTorch**: Core deep learning framework for model implementation and training.
 
-## Challenges and Learnings
+- **Python**: General scripting, experimentation, and data handling.
 
-The biggest challenge in this project was acquiring and processing reliable data to accurately predict solar feasibility across the U.S. Many APIs had strict rate limits or restricted access to high-resolution data. To overcome this, we optimized our algorithms to work efficiently with limited data and adjusted our web features to cache and re-use results intelligently. This experience taught us the importance of balancing technical constraints with user experience and deepened our understanding of working with APIs and predictive modeling under limitations.
+- **Matplotlib**: For visualizing bounding boxes and plotting performance metrics.
 
 ## Outcome
 
-Our team took home the "Overall Winner" prize of UCSB's 2025 Datathon, DataOrbit!
+[Paper](https://docs.google.com/document/d/1j31-gqCcRUaNzdwDTnNzTs_-_jqU29Yud_THigf4NW4/edit?usp=sharing) and [Github](https://github.com/k-nn-tht/cs190i-yolo)
 

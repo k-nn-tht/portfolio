@@ -1,38 +1,28 @@
 ---
 title: "Yelp Sentiment Analysis on Boba Stores"
-publishedAt: "2024-02-01"
-summary: "Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think."
+publishedAt: "2025-02"
+summary: "Finetuning a pretrained tranformer-based LLM on Boba Shop Yelp Reviews using models and dataset from Huggingface"
 images:
-  - "/images/projects/project-02/in_progress.png"
+  - "/images/projects/project-02/Yelp_Boba_Sentiment/distilbert.jpg"
+  - "/images/projects/project-02/Yelp_Boba_Sentiment/yelp-graph.png"
 link: "https://github.com/k-nn-tht/yelp_sentiment_analysis"
 ---
 
 ## Overview
 
-In this project, I focused on automating the often tedious design handover process. The goal was to create a pipeline that converts Figma designs directly into clean, production-ready code. By integrating design tokens, component libraries, and automated workflows, this solution significantly reduced the time spent on translating design assets into code, while maintaining design consistency across the product.
-
-## Key Features
-
-- **Figma Plugin Integration**: Developed a custom Figma plugin that extracts design tokens such as colors, typography, and spacing values, and exports them in a format compatible with our codebase.
-- **Code Generation**: Integrated an automated process that translates Figma components into React code using a combination of design tokens and pre-built component templates. This allowed developers to focus more on logic and less on repetitive UI coding.
-- **Continuous Sync**: Established a CI/CD pipeline that continuously synchronizes design changes from Figma to the codebase, ensuring design updates are reflected instantly without manual intervention.
-- **Scalable Design System**: Leveraged a design system that remains the single source of truth for both designers and developers, making it easy to maintain consistency even as the product evolves.
+In this project, I focused on learning different types of finetuning including, head-only, full, and LoRA. The overall goal was to compare inference speed compared to accuracy/performance and determine which is best based on the scenario.
 
 ## Technologies Used
 
-- **Figma API**: For extracting design tokens and component data directly from the Figma designs.
-- **React and Next.js**: For building the front-end codebase with clean, reusable components.
-- **Styled-Components**: For managing styles dynamically using design tokens.
-- **GitHub Actions**: For automating the pipeline and syncing design changes to the repository.
+- **Hugging Face**: For loading DistilBERT, managing tokenizers, downloading dataset, and applying finetuning strategies (head-only, full, LoRA).
+- **Python**: For extracting design tokens and component data directly from the Figma designs.
+- **LoRA (Low-Rank Adaptation)**: Efficient parameter-efficient fine-tuning method.
+- **Wandb**: For model training vizualizations
 
 ## Challenges and Learnings
 
-One of the biggest challenges was ensuring that the generated code was clean and maintainable. This involved setting up intelligent mapping between Figma components and React code structures, as well as managing edge cases like responsive design and conditional rendering. Additionally, the continuous synchronization required a robust error-handling system to prevent conflicts during development.
+This projects was a great step in exposing me to more about machine learning and AI. I was able to learn ways to adapt a pretrained model to a specific task using different methods.
 
 ## Outcome
 
-The automated Figma to code pipeline has streamlined the handoff process, cutting down design-to-development time by 40%. Designers now have more confidence that their designs will be accurately translated into code, and developers can focus on more complex logic and feature development. This project has proven the value of automation in bridging the gap between design and development.
-
----
-
-This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation.
+I wrote a 1 page paper on my findings and process: [Paper](https://docs.google.com/document/d/17lMNpDXW5ij57yW0dWG7npsoHQIv2vFTRcfbv7QeNl8/edit?usp=sharing), [Github](https://github.com/k-nn-tht/yelp_sentiment_analysis)
